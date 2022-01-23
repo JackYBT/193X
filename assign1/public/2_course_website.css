@@ -1,1 +1,64 @@
 /* TODO: Add your CSS here */
+body {
+    font-family: sans-serif;
+    padding: 0px;
+    margin: 0px;  
+  }
+.headerbox{
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: #444444;
+    width: 100%;
+    margin-bottom: 21px;
+}
+
+#website_link {
+    /*display: inline;*/
+    color: #bbbbbb;
+    font-size: x-large;
+    margin: 15px 15px 15px 15px;
+}
+
+#website_link:hover{
+    color: white;
+    text-decoration:underline;
+}
+#website_link:link{
+    text-decoration: none;
+    color: #bbbbbb;
+}
+
+.website_link_class{
+    margin: 15px 15px 15px 15px;
+    float: right;
+    align-items: flex-end;
+}
+
+.website_link_class:link, .website_link_class:visited{
+    color:#bbbbbb;
+    text-decoration: none;
+}
+.website_link_class:hover{
+    color:white;
+    text-decoration: underline;
+}
+
+#minibox{
+    float:right;
+}
+
+#Stanfordbox {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: yellow;
+    transform:scale(0.75);
+}
+
+h1.class_title{font-weight: normal;}
+#class_title{
+    margin: 0px,0px,0px,0px;
+    font-weight: normal;
+}
+

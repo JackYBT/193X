@@ -2,15 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <!-- TODO: Add your title here -->
+    <title> CS 193X</title>
 
     <!-- These two lines provide automatic page and style reloading when files change -->
     <script src="/socket.io/socket.io.js"></script>
     <script src="/lib/client/updater.js" defer></script>
 
-    <!-- TODO: Add your CSS link here -->
+    <link rel="stylesheet" href="2_course_website.css">
   </head>
   <body>
+    <article>
+      <div class="headerbox">
+        <a id="website_link" href="https://web.stanford.edu/class/cs193x/">CS 193X</a>
+        <div id="minibox">
+        <a class="website_link_class" href="/"> LECTURES </a> <a class="website_link_class" href="/"> ASSIGNMENTS</a> <a class="website_link_class" href="/">OFFICE HOURS</a>
+        </div>
+      </div>
+    </article>
+
+    <article>
+      <div id = "Stanfordbox">
+        <img id="stanfordlogo" src = "images/stanford.png" alt="Stanford is a tradeschool" width="100" height="100">
+        <div ><h1 id="class_title">CS 193X: Web Programming Fundamentals</h1><div>
+        <div>Winter 2022</div>
+      </div>
+    </article>
+
     <!-- TODO: Add your page content here -->
   </body>
 </html>

@@ -14,6 +14,40 @@
 #seal {
   height: 200px;
 }
+body {
+  font-family: sans-serif;
+}
+h1 {
+  font-family: sans-serif;
+}
+h2 {
+  font-family: sans-serif;
+}
+p {
+  font-family: sans-serif;
+}
+
+p.upper-bold strong {
+  text-transform: uppercase;
+}
+
+#first-para {
+  margin-top: -25px;
+}
+#spacing{
+
+  padding:40px 40px 40px 0px;
+}
+
+#spacing>span{
+  margin: 40px;
+}
+#flex-align {
+  display: flex;
+  flex-direction: row;
+  /*vertical-align: bottom;*/
+  align-self: bottom;
+}
 
 /* A) Page Font */
 /* TODO */
