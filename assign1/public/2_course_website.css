@@ -1,4 +1,7 @@
 /* TODO: Add your CSS here */
+*{
+    font-family: sans-serif
+}
 body {
     font-family: sans-serif;
     padding: 0px;
@@ -6,11 +9,23 @@ body {
   }
 .headerbox{
     display:flex;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
     background-color: #444444;
     width: 100%;
+    padding-right: 0;
     margin-bottom: 21px;
+}
+
+.headerbox a {
+    text-decoration: none;
+    color: #bbbbbb;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
 }
 
 #website_link {
@@ -19,10 +34,16 @@ body {
     font-size: x-large;
     margin: 15px 15px 15px 15px;
 }
-
+a:hover{
+    text-decoration: underline;
+}
+a:visited{
+    color: #337ab7;
+    text-decoration: none; 
+}
 #website_link:hover{
     color: white;
-    text-decoration:underline;
+    text-decoration:none;
 }
 #website_link:link{
     text-decoration: none;
@@ -44,16 +65,22 @@ body {
     text-decoration: underline;
 }
 
-#minibox{
-    float:right;
+.minibox{
+    display:flex;
 }
 
-#Stanfordbox {
+.minibox>div{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 15px;
+}
+
+div#Stanfordbox {
     display:flex;
     flex-direction: row;
     justify-content: center;
-    background-color: yellow;
-    transform:scale(0.75);
+    width:75%;
 }
 
 h1.class_title{font-weight: normal;}
@@ -62,3 +89,80 @@ h1.class_title{font-weight: normal;}
     font-weight: normal;
 }
 
+.big_box { /* flex container */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .big_box>*{
+    display: flex;
+    flex-direction: column;
+    margin-left:15px;
+    margin-right:15px;
+  }
+  
+  .big_box>*:first-child{
+    width: 15em;
+    align-items: center;  
+    flex-shrink:0;
+  }
+
+  .words{
+      margin:0px;
+  }
+
+  h1#class_title {
+    font-weight: normal;
+    margin-top:0;
+  }
+
+  h2{
+    color:#959595;
+  }
+
+  h3{
+    color:#175e54;
+    font-size:medium;
+    margin:0;
+  }
+  
+  h4{
+    font-size:x-small;
+    font-weight:normal;
+    margin-top:0;
+  }
+
+  div#side_bar{
+    flex-shrink:0;
+    width: 15em;
+  }
+
+  .announcement_class{
+    background-color:#eaf2e9;
+    border:1px solid #c7d1c5;
+    border-radius: 4px;
+    padding:10px;
+    margin:5px;
+  
+  }
+
+  ul{
+    margin:0;
+  }
+
+  footer {
+    text-align: center;
+    color: green;
+    font-size: small;
+    background-color: #f8f8f8;
+  }
+
+  img#picture{
+    width: 9em;
+    height: 9em;
+ }
+   img#stanfordlogo{
+       width:100px;
+       height: 100px;
+   }
