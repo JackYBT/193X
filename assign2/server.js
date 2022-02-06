@@ -1,0 +1,22 @@
+import express from "express";
+import http from "http";
+import path from "path";
+import { URL } from "url";
+
+import updater from "./lib/server/updater.js";
+
+const PORT = 1930;
+
+const app = express();
+const server = http.createServer(app);
+
+const dirname = process.cwd();
+const publicPath = path.join(dirname, "public");
+console.log(`Serving files from ${publicPath}`);
+app.use("/lib/client", express.static(path.join(dirname, "lib/client")));
+app.use(express.static(publicPath));
+updater(server, publicPath);
+
+server.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}.`);
+});

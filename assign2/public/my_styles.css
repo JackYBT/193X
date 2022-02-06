@@ -1,0 +1,30 @@
+/* TODO: Your styles here */
+#board {
+    display: flex;
+} /* Answers part 1*/
+
+#board > .column {
+    overflow: auto; /*Not sure if this is necessary*/
+    width: 30em;
+    flex-shrink: 1; 
+    border-right: 1px solid lightgray;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+#board > .column >*{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.buttons {
+    display:none;
+    position: absolute;
+    top:0;
+    right:0;
+    padding: 0.5rem;
+}
+.card:hover .buttons{
+    display:flex;
+}

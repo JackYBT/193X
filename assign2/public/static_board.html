@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Task Board | Assignment 2</title>
+
+    <!-- These two lines provide automatic page and style reloading when files change -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/lib/client/updater.js" defer></script>
+
+    <link rel="stylesheet" href="base_styles.css">
+    <link rel="stylesheet" href="my_styles.css">
+  </head>
+  <body>
+    <section id="sidebar">
+      <div>
+        <h1>Task Board</h1>
+
+        <section>
+          <h2>Add Column</h2>
+          <form id="columnForm">
+            <input type="text" name="title" id="columnTitle" placeholder="Title" required>
+            <button type="submit" id="addColumn">Add</button>
+          </form>
+        </section>
+
+        <section>
+          <h2>Add Card</h2>
+          <form id="cardForm">
+            <label for="cardTitle">Title:</label>
+            <input type="text" name="title" id="cardTitle" required>
+            <label for="cardDescription">Description:</label>
+            <textarea name="description" id="cardDescription"></textarea>
+            <label for="cardColor">Color:</label>
+            <input type="text" name="color" id="cardColor">
+            <button type="submit" id="addCard">Add</button>
+          </form>
+        </section>
+      </div>
+
+      <div class="buttons">
+        <input type="file" id="importFile" class="hidden">
+        <button id="import">Import</button>
+        <button id="export">Export</button>
+      </div>
+    </section>
+
+    <main id="board">
+      <section class="column">
+        <h2 class="columnTitle">To Do</h2>
+        <article class="card" style="background-color: khaki;">
+          <h3 class="title">Part 2: Hypothetical Course Website</h3>
+          <p class="description">Create page layout for a hypothetical course website based on the screenshot and description</p>
+          <div class="buttons">
+            <button class="startMove"><img src="icons/move.svg" alt="Edit"></button>
+            <button class="delete"><img src="icons/delete.svg" alt="Delete"></button>
+          </div>
+        </article>
+      </section>
+
+      <section class="column">
+        <h2 class="columnTitle">Doing</h2>
+      </section>
+
+      <section class="column">
+        <h2 class="columnTitle">Done</h2>
+        <article class="card" style="background-color: pink;">
+          <h3 class="title">Setup</h3>
+          <p class="description">Install Node and npm</p>
+          <div class="buttons">
+            <button class="startMove"><img src="icons/move.svg" alt="Edit"></button>
+            <button class="delete"><img src="icons/delete.svg" alt="Delete"></button>
+          </div>
+        </article>
+        <article class="card" style="background-color: lightblue;">
+          <h3 class="title">Part 1: CSS Warmups</h3>
+          <p class="description">Page font, text case, margin collapsing, inline element spacing, Flexbox</p>
+          <div class="buttons">
+            <button class="startMove"><img src="icons/move.svg" alt="Edit"></button>
+            <button class="delete"><img src="icons/delete.svg" alt="Delete"></button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- Template elements to be cloned in JavaScript -->
+    <section class="template column">
+      <h2 class="columnTitle">[TEMPLATE]</h2>
+    </section>
+
+    <article class="template card">
+      <h3 class="title">[TEMPLATE]</h3>
+      <p class="description">You should never see this text.</p>
+      <div class="buttons">
+        <button class="startMove"><img src="icons/move.svg" alt="Edit"></button>
+        <button class="delete"><img src="icons/delete.svg" alt="Delete"></button>
+      </div>
+    </article>
+  </body>
+</html>

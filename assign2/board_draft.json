@@ -1,0 +1,28 @@
+{
+  "To Do": [
+    {
+      "title": "Part 2: Hypothetical Course Website",
+      "description": "Create page layout for a hypothetical course website based on the screenshot and description",
+      "color": "khaki"
+    },
+    {
+      "title": "what's good",
+      "description": "hey hey",
+      "color": "black"
+    }
+  ],
+  "Doing": [],
+  "Done": [
+    {
+      "title": "Setup",
+      "description": "Install Node and npm",
+      "color": "pink"
+    },
+    {
+      "title": "Part 1: CSS Warmups",
+      "description": "Page font, text case, margin collapsing, inline element spacing, Flexbox",
+      "color": "lightblue"
+    }
+  ],
+  "ideas": []
+}

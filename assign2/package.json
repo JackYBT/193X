@@ -1,0 +1,25 @@
+{
+  "name": "@cs193x/assign2",
+  "version": "1.0.0",
+  "description": "CS193X Assignment 2",
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "module",
+  "main": "server.js",
+  "dependencies": {
+    "chokidar": "^3.5.2",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15",
+    "socket.io": "^4.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "lib",
+      "server.js"
+    ]
+  }
+}

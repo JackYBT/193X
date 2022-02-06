@@ -1,0 +1,157 @@
+/* Global styles */
+:root {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  font-family: sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: x-large;
+  font-weight: 600;
+  text-align: center;
+}
+
+h2 {
+  font-size: large;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: medium;
+  font-weight: 600;
+}
+
+input {
+  /* Inputs often have a minimum width, which can interfere with using flexbox to size them */
+  min-width: 0;
+}
+
+input, button {
+  /* Inputs and buttons often use a smaller font. Use a normal font size by default. */
+  font-size: medium;
+}
+
+/* Unfortunately, we can't simply define this rule on .template, because a later selector may
+   override it, so we use two class selectors to be more specific. */
+.hidden, .template.column, .template.card {
+  display: none;
+}
+
+/* Sidebar */
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: lightgray;
+  padding: 1rem;
+  width: 15em;
+}
+
+#sidebar section {
+  border: 1px solid #f5f5f5;
+  border-radius: 0.25rem;
+  background-color: #dcdcdc;
+  
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+}
+
+#columnForm {
+  display: flex;
+  align-items: center;
+}
+
+#columnTitle {
+  flex-grow: 1;
+  margin-right: 0.25rem;
+}
+
+#cardForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#cardForm input, #cardForm textarea {
+  margin-bottom: 0.5rem;
+}
+
+#cardDescription {
+  font-family: inherit;
+  height: 6em;
+}
+
+#sidebar .buttons {
+  display: flex;
+}
+
+#sidebar .buttons > * {
+  /* This is a shorthand property that sets flex-grow, but also sets the "content size" (called
+     the "basis") to 0, meaning all buttons will be the same size */
+  flex: 1;
+  margin: 0 0.125rem;
+}
+
+/* Board area */
+#board {
+  flex-grow: 1;
+  /* Make the board scroll if it needs to. This keeps the sidebar in place when a column gets too
+     long. Without it, the board would overflow its container and make the entire page scroll. */
+  overflow: auto;
+}
+
+.columnTitle {
+  background-color: #f5f5f5;
+  border-radius: 0.25rem;
+  margin: 0.5rem 0;
+  padding: 0.75rem 0.5rem;
+}
+
+.card {
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+}
+
+.card .description {
+  margin: 0;
+}
+
+/* Unset browser's default button styles for these buttons. */
+.card .buttons button, .moveHere {
+  background-color: transparent;
+  border: none;
+}
+
+.card .buttons button:hover {
+  /* rgba defines a translucent color, allowing the card's background color to show through. */
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.selected {
+  border: 2px solid black;
+}
+
+.moveHere {
+  color: gray;
+  font-size: small;
+}
+
+.moveHere:hover {
+  background-color: #e0e0e0;
+  /* Use the default text color from the page. */
+  color: inherit;
+}
