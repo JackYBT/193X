@@ -1,0 +1,52 @@
+CS193X Final Project Milestone
+=============================
+
+Project Name: Social Media on Terra Blockchain
+Your Name: Bi Tian (Jack) Yuan
+Your SUNetID: jackyuan
+
+Overview
+--------
+<TODO: Let us know how things are going. What have you explored, looked into, worked on, and tried so far? What do you have left to do? Are you running into any particular difficulties or blockers?>
+
+I have explored creating an NFT-minting project, however I have decided to give up when I tried following the Solidity tutorial step-by-step and failed to reproduce an actual NFT on the blockchain after 8 hours. Therefore, I decided to create something else: A Reddit forum on the blockchain, where the users can make posts, but all the information is stored on the blockchain. Right now, I have spent around 5 hours trying to hook up the smart contracts of Rust to a simple await function & brushing up on the specs of the Terra chain, (the blockchain I will be using), and it seems to be working. I expect that once I am completed, the interface will look like an extra-secure reddit forum. 
+
+
+Project Changes
+---------------
+<TODO: If you have needed to change your project in any way, such as scope, features, etc., please let us know what you changed.>
+
+^Above
+
+
+Follow-up
+---------
+<TODO: Use this space to respond to any questions/feedback you received on your proposal, or ask us any questions you may have.>
+
+To address Meredith's concern that I still need a backend to keep my data, I will probably save the data to a backend database in addition to broadcasting it on the blockchain. This way we will have 2 copies of the data, one is immutable on the blockchain, and the other is locally stored in our backend database, so this addresses both of the requests of the 193X course requirements, and also utilizes the advantage of the blockchain.
+
+API
+---
+<TODO: Identify a few (at least two or so) of your API endpoints, what they'll do, how they'll be used.>
+
+I will use the terra API in order to send data & access data from the blockchain, as well as the standard MongoDB API in order to save data to my backend
+
+
+
+External libraries and code
+---------------------------
+<TODO: Identify any external libraries or code you are using or plan to use, and describe how it fits into your project. Please include everything even if you already listed it in your proposal.>
+
+I plan on using some existing smart contracts functions that are provided by the Terra documentation, so I can focus more on writing the full-stack code of the website instead of re-implementing the Rust part from scratch. 
+
+Collaboration and resources
+---------------------------
+<TODO: Identify any sources you have consulted or plan to consult, except for code listed above. Include those you listed previously in your proposal.>
+
+I plan on using the Terra.money documentation on their website & stackoverflow & github of how other people implemented their terra smart contracts. 
+
+Anything else?
+-------------
+<TODO: Anything else you'd like the teaching staff to know? How are you doing overall?>
+
+I'm great! Just recovering from my cold, and getting back to work :)
